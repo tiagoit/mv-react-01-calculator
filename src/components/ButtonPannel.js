@@ -12,10 +12,9 @@ const buttons = [
 const ButtonPannel = () => (
   buttons.map((row, i) => (
     <div key={i}>
-      {row.map((b) => <Button key={b} name={b}>{b}</Button>)}
+      {row.map((b) => <Button key={b} name={b} />)}
     </div>
   ))
-  // return <div>{buttons[0].map((b) => <div key={b}>{b}</div>)}</div>;
 );
 
 export default ButtonPannel;
