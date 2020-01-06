@@ -12,7 +12,7 @@ const buttons = [
 const ButtonPannel = () => (
   buttons.map((row, i) => (
     <div key={i}>
-      {row.map((b) => <Button key={b} name={b} />)}
+      {row.map(b => <Button key={b} name={b} />)}
     </div>
   ))
 );

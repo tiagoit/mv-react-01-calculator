@@ -25,6 +25,7 @@
         "import/no-unresolved": "off",
         "react/jsx-filename-extension": "off",
         "react/jsx-one-expression-per-line": "off",
-        "react/no-array-index-key": "off"
+        "react/no-array-index-key": "off",
+        "arrow-parens": "off"
     }
 }
