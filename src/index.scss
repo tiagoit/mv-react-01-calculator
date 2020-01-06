@@ -1,0 +1,30 @@
+.app {
+  width: 700px;
+  margin: auto;
+}
+
+.display {
+  background-color: grey;
+  height: 100px;
+  line-height: 100px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 48px;
+  padding-right: 48px;
+  text-align: right;
+}
+
+.button-panel {
+  & > div {
+    display: flex;
+    height: 100px;
+  }
+}
+
+.button {
+  line-height: 100px;
+  text-align: center;
+  color: black;
+  border: 1px solid black;
+  font-size: 24px;
+}
