@@ -1,6 +1,6 @@
 const calculate = ({total, next, operation}, buttonName) => {
   // 'AC', '+/-', '%', '÷', 'x', '-', '+', '='
-  let res = {
+  const res = {
     operation: buttonName,
   };
   switch (buttonName) {
@@ -8,7 +8,10 @@ const calculate = ({total, next, operation}, buttonName) => {
       res.total = 0;
       res.next = 0;
       break;
-  
+    case '+/-':
+      res.total = 0;
+      res.next = 0;
+      break;
     default:
       break;
   }
