@@ -19,6 +19,7 @@
       "no-shadow": "off",
       "arrow-parens": "off",
       "react/jsx-props-no-spreading": "off",
-      "no-param-reassign": "off"
+      "no-param-reassign": "off",
+      "import/extensions": "off"
     }
   }
