@@ -2,19 +2,23 @@ import operate from './operate';
 
 const calculate = ({ total, next, operation }, buttonName) => {
   const operations = ['+', '-', 'x', '÷', '%'];
-  operation = buttonName;
-  if (operations.includes(operation)) {
+
+  if (operations.includes(buttonName)) {
+    if (total !== null && next !== null && operation) {
+      total = operate(total, next, operation);
+    } else {
+      total = total || next;
+      operation = buttonName;
+    }
+  } else if (buttonName === '=' && total && next && operation) {
     total = operate(total, next, operation);
-    next = null;
+    operation = null;
   } else if (buttonName === 'AC') {
-    total = 0;
-    next = 0;
+    total = null;
   } else if (buttonName === '+/-') {
-    total *= -1;
-    next *= -1;
-  } else if (buttonName === '=') {
-    next = null;
+    total = (total || next) * -1;
   }
+  next = null;
   return { total, next, operation };
 };
 
