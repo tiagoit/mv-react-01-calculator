@@ -1,21 +1,21 @@
+import operate from './operate';
+
 const calculate = ({ total, next, operation }, buttonName) => {
-  // 'AC', '+/-', '%', '÷', 'x', '-', '+', '='
-  
-  const res = {
-    operation: buttonName,
-  };
-  switch (buttonName) {
-    case 'AC':
-      res.total = 0;
-      res.next = 0;
-      break;
-    case '+/-':
-      res.total = total * -1;
-      res.next = next * -1;
-      break;
-    default:
-      break;
+  const operations = ['+', '-', 'x', '÷', '%'];
+  operation = buttonName;
+  if (operations.includes(operation)) {
+    total = operate(total, next, operation);
+    next = null;
+  } else if (buttonName === 'AC') {
+    total = 0;
+    next = 0;
+  } else if (buttonName === '+/-') {
+    total *= -1;
+    next *= -1;
+  } else if (buttonName === '=') {
+    next = null;
   }
+  return { total, next, operation };
 };
 
 export default calculate;

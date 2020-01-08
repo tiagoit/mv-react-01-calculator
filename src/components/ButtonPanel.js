@@ -17,7 +17,7 @@ const ButtonPanel = () => (
           <Button
             key={b}
             name={b}
-            {...(b === '0' && { wide: 2 })}
+            {...(b === '0' && { wide: true })}
             {...(i < 4 && j < 3 && { color: 'lightgrey' })}
             {...(i === 4 && j < 2 && { color: 'lightgrey' })}
           />
