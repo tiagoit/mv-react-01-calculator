@@ -1,12 +1,12 @@
 import React from 'react';
 import Display from './Display';
-import ButtonPannel from './ButtonPannel';
+import ButtonPanel from './ButtonPanel';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Display value="0" />
-      <ButtonPannel />
+      <ButtonPanel />
     </div>
   );
 }
