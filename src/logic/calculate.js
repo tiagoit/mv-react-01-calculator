@@ -10,9 +10,11 @@ const calculate = ({ total, next, operation }, buttonName) => {
       total = total || next;
       operation = buttonName;
     }
-  } else if (buttonName === '=' && total && next && operation) {
-    total = operate(total, next, operation);
-    operation = null;
+  } else if (buttonName === '=' && total && next) {
+    if (operation) {
+      total = operate(total, next, operation);
+      operation = null;
+    } else total = next;
   } else if (buttonName === 'AC') {
     total = null;
   } else if (buttonName === '+/-') {
