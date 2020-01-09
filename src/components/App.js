@@ -16,9 +16,17 @@ class App extends React.Component {
 
   handleClick(buttonName) {
     if (/^\d|\.$/.test(buttonName)) {
-      this.setState(previousState => ({
-        next: (previousState.next ? previousState.next + buttonName : buttonName),
-      }));
+      this.setState(previousState => {
+        let next = previousState.next || '0';
+        if (buttonName !== '.') {
+          try {
+            next = parseFloat(next += buttonName);
+          } catch (e) {
+            next = 0;
+          }
+        } else if (next.toString().indexOf('.') === -1) next += buttonName;
+        return { next };
+      });
     } else {
       this.setState((state) => calculate(state, buttonName));
     }
