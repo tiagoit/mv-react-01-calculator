@@ -1,12 +1,16 @@
+body {
+  box-sizing: border-box;
+}
+
 .app {
-  width: 700px;
+  width: 290px;
   margin: auto;
 }
 
 .display {
   background-color: grey;
-  height: 100px;
-  line-height: 100px;
+  height: 72px;
+  line-height: 72px;
   color: #fff;
   font-weight: bold;
   font-size: 48px;
@@ -15,17 +19,20 @@
 }
 
 .button-panel {
-  & > div {
-    display: flex;
-    height: 100px;
-  }
-}
+  border: 1px solid grey; 
 
-button {
-  line-height: 100px;
-  text-align: center;
-  color: black;
-  border: 1px solid black;
-  font-size: 24px;
-  flex: 1;
+  & > div {
+    height: 72px;
+
+    button {
+      width: 64px;
+      height: 64px;
+      margin: 4px;
+      border: 0;
+      border-radius: 12px;
+      text-align: center;
+      color: black;
+      font-size: 24px;
+    }  
+  }
 }
