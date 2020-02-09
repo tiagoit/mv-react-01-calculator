@@ -15,7 +15,7 @@ class Button extends React.Component {
   render() {
     const { name, color, wide } = this.props;
     const style = { backgroundColor: color };
-    if (wide) style.flex = 2;
+    if (wide) style.width = 136;
 
     return (
       <button
